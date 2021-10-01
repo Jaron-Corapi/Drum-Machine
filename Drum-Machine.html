@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="customStyle.css">
+  <title>Viral Quote Machine</title>
+
+    <script>
+      function play(str){
+
+        if (str === "q" || str === "Q"){
+            document.getElementById('display').innerText = "J-Quillin";
+          } else if (str === "w" || str === "W") {
+            document.getElementById('display').innerText = "Idiot";
+          } else if (str === "e" || str === "E") {
+            document.getElementById('display').innerHTML = "Honey Badger";
+          } else if (str === "a" || str === "A") {
+            document.getElementById('display').innerHTML = "A-Aron";
+          } else if (str === "s" || str === "S") {
+            document.getElementById('display').innerHTML = "Sneaky Snake";
+          } else if (str === "d" || str === "D") {
+            document.getElementById('display').innerHTML = "Deez Nuts";
+          } else if (str === "z" || str === "Z") {
+            document.getElementById('display').innerHTML = "Air Horn";
+          } else if (str === "x" || str === "X") {
+            document.getElementById('display').innerHTML = "Billions and Billions and Billions";
+          } else if (str === "c" || str === "C") {
+            document.getElementById('display').innerHTML = "China!";
+          }
+
+        var audio = document.getElementById(str);
+        audio.play();
+        } 
+    
+        window.document.onkeyup = function(event) {
+          let keystroke = event.key
+          if (keystroke === "q" || keystroke === "Q"){
+            play("Q");
+          } else if (keystroke === "w" || keystroke === "W") {
+            play("W")
+          } else if (keystroke === "e" || keystroke === "E") {
+            play("E")
+          } else if (keystroke === "a" || keystroke === "A") {
+            play("A")
+          } else if (keystroke === "s" || keystroke === "S") {
+            play("S")
+          } else if (keystroke === "d" || keystroke === "D") {
+            play("D")
+          } else if (keystroke === "z" || keystroke === "Z") {
+            play("Z")
+          } else if (keystroke === "x" || keystroke === "X") {
+            play("X")
+          } else if (keystroke === "c" || keystroke === "C") {
+            play("C")
+          }
+        }
+    </script>
+
+</head>
+
+<body>
+  <div class="bg-success">
+<div id="drum-machine" class="container">
+  <h1 class="text-center">Viral Quote Machine</h1>
+  
+    
+    
+    <div class="card my-3">
+      <div class="card-body">
+    <div id="display" class="text-center">Here is the display</div>
+  </div>
+</div>
+
+    <button class="drum-pad btn btn-block btn-primary" id="drum-1" onclick="play('Q')" onkeydown="play('Q')">
+      Q
+      <audio src="./MP3/J-quillin.mp3" class="clip" id="Q">
+    </button>
+
+    <button class="drum-pad btn-block btn btn-primary" id="drum-2" onclick="play('W')" onkeydown="play('W')">
+      W
+      <audio src="./MP3/Idiot.mp3" class="clip" id="W"></audio>
+    </button>
+
+    <button class="drum-pad btn btn-block btn-primary" id="drum-3" onclick="play('E')" onkeydown="play('E')">
+      E
+      <audio src="./MP3/Honey-Badger.mp3" class="clip" id="E"></audio>
+    </button>
+
+    <button class="drum-pad btn btn-block btn-primary" id="drum-4" onclick="play('A')" onkeydown="play('A')">
+      A
+      <audio src="./MP3/A-aron.mp3" class="clip" id="A"></audio>
+    </button>
+
+    <button class="drum-pad btn btn-block btn-primary" id="drum-5" onclick="play('S')" onkeydown="play('S')">
+      S
+      <audio src="./MP3/Snake.mp3" class="clip" id="S"></audio>
+    </button>
+
+    <button class="drum-pad btn btn-block btn-primary" id="drum-6" onclick="play('D')" onkeydown="play('D')">
+      D
+      <audio src="./MP3/DeezNuts.mp3" class="clip" id="D"></audio>
+    </button>
+
+    <button class="drum-pad btn btn-block btn-primary" id="drum-7" onclick="play('Z')" onkeydown="play('Z')">
+      Z
+      <audio src="./MP3/Airhorn.mp3" class="clip" id="Z"></audio>
+    </button>
+
+    <button class="drum-pad btn btn-block btn-primary" id="drum-8" onclick="play('X')" onkeydown="play('X')">
+      X
+      <audio src="./MP3/Billions.mp3" class="clip" id="X"></audio>
+    </button>
+
+    <button class="drum-pad btn btn-block btn-primary" id="drum-9" onclick="play('C')" onkeydown="play('C')">
+      C
+      <audio src="./MP3/China.mp3" class="clip" id="C"></audio>
+    </button>
+    
+  </div>
+  </div>
+<div id="root"></div>  
+
+</body>
+
+
+  <!-- Bootstrap CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <!--FCC Test Suite-->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+</html>
